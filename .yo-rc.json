@@ -1,0 +1,21 @@
+{
+  "generator-jhipster": {
+    "applicationType": "monolith",
+    "authenticationType": "jwt",
+    "baseName": "projeto",
+    "buildTool": "maven",
+    "clientFramework": "angular",
+    "databaseType": "sql",
+    "devDatabaseType": "postgresql",
+    "enableSwaggerCodegen": true,
+    "entities": ["Aluno", "Meta"],
+    "jhipsterVersion": "8.9.0",
+    "jwtSecretKey": "NjVjOGZmNjhjMzRlYTUxNjdhZGJiOWE4ZTA2ZTllMjg4OGZjMjBkYTMwNTY1M2U5OWQxNjM2MGQ4ZjMyNzkyNWQ4OTY3MmRlYjA4MWI2NzY3NTUyZmM1M2Y1YmE1MTMyMjk2MWI4NjgyNmEwOThiOGE2NTY2MDdmMTJlZDY5YzI=",
+    "languages": ["en"],
+    "lastLiquibaseTimestamp": 1742215724000,
+    "nativeLanguage": "en",
+    "packageName": "meuprojeto",
+    "prodDatabaseType": "postgresql",
+    "searchEngine": false
+  }
+}

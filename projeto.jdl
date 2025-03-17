@@ -1,0 +1,45 @@
+application {
+  config {
+    baseName projeto
+    applicationType monolith
+    packageName meuprojeto
+    authenticationType jwt
+    databaseType sql
+    devDatabaseType postgresql
+    prodDatabaseType postgresql
+    buildTool maven
+    clientFramework angular
+    searchEngine false
+    enableSwaggerCodegen true
+  }
+  entities Aluno, Meta
+}
+
+/**
+ * Entidade que representa um Aluno.
+ */
+entity Aluno {
+  nome String required,
+  email String required,
+  dataNascimento LocalDate required
+}
+
+/**
+ * Entidade que representa uma Meta.
+ */
+entity Meta {
+  area String required,
+  notaEsperada Integer required
+}
+
+/**
+ * Relacionamento entre Aluno e Meta.
+ */
+relationship OneToMany {
+  Aluno{metas} to Meta{aluno(email)}
+}
+
+// Configurações adicionais
+paginate Aluno, Meta with pagination
+service Aluno, Meta with serviceImpl
+dto Aluno, Meta with mapstruct
